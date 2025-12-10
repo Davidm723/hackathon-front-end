@@ -52,4 +52,4 @@ const signIn = async (formData) => {
   }
 };
 
-export { signUp };
+export { signUp, signIn };
