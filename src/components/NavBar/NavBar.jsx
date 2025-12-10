@@ -10,6 +10,9 @@ const NavBar = () => {
       {user ? (
         <ul>
           <li>Welcome, {user.username}</li>
+          <li>
+            <Link to="/">Sign Out</Link>
+          </li>
         </ul>
       ) : (
         <ul>
