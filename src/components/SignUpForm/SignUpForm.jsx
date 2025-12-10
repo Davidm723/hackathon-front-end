@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 
 import { signUp } from "../../services/authService";
+import { UserContext } from "../../contexts/UserContext";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
     username: "",
@@ -12,7 +14,7 @@ const SignUpForm = () => {
     passwordConf: "",
   });
 
-  const { usename, password, passwordConf } = formData;
+  const { username, password, passwordConf } = formData;
 
   const handleChange = (e) => {
     setMessage("");
@@ -23,14 +25,15 @@ const SignUpForm = () => {
     e.preventDefault();
     try {
       const newUser = await signUp(formData);
-      console.log(newUser);
+      setUser(newUser);
+      navigate("/");
     } catch (err) {
       setMessage(err.message);
     }
   };
 
   const isFormInvalid = () => {
-    return !(usename && password && password === passwordConf);
+    return !(username && password && password === passwordConf);
   };
 
   return (
