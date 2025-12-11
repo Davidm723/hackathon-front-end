@@ -9,11 +9,29 @@ const NavBar = () => {
   const handleSignOut = () => {
     localStorage.removeItem("token");
     setUser(null);
+  };
+  return (
+    <nav className="navbar">
+      {user ? (
+        <ul>
+          <li>Welcome, {user.username}</li>
+          <li>
+            <Link to="/" onClick={handleSignOut}>
+              Sign Out
+            </Link>
+          </li>
+        </ul>
+      ) : (
+        <ul>
+          <li>
+            <Link to="/sign-in">Sign In</Link>
+          </li>
+          <li>
     navigate("/sign-up");
   };
 
   return (
-    <nav className="navbar">
+    
       <div className="nav-left">
         <Link to="/">MyApp</Link>
       </div>
