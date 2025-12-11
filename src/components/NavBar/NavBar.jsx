@@ -12,26 +12,6 @@ const NavBar = () => {
   };
   return (
     <nav className="navbar">
-      {user ? (
-        <ul>
-          <li>Welcome, {user.username}</li>
-          <li>
-            <Link to="/" onClick={handleSignOut}>
-              Sign Out
-            </Link>
-          </li>
-        </ul>
-      ) : (
-        <ul>
-          <li>
-            <Link to="/sign-in">Sign In</Link>
-          </li>
-          <li>
-    navigate("/sign-up");
-  };
-
-  return (
-    
       <div className="nav-left">
         <Link to="/">MyApp</Link>
       </div>
@@ -53,5 +33,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
