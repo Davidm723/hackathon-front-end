@@ -6,9 +6,11 @@ const App = () => {
   return (
     <>
       <NavBar />
+      <main className="main-container">
       <Routes>
         <Route path="/sign-up" element={<SignUpForm />} />
       </Routes>
+      </main>
     </>
   );
 };
