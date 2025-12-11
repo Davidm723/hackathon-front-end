@@ -62,13 +62,6 @@ button:focus-visible {
   color: white;
 }
 
-.nav-left a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-
 .nav-right {
   display: flex;
   align-items: center;
@@ -88,8 +81,9 @@ button:focus-visible {
 .nav-right button:hover,
 .nav-right a:hover {
   color: #646cff;
+   font-weight: bold;
+   text-decoration: none;
 }
-
 
 .main-container {
   display: flex;
@@ -99,3 +93,22 @@ button:focus-visible {
   min-height: calc(100vh - 70px);
 }
 
+
+.nav-left a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right ul {
+  display: flex; 
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-right a:hover {
+  color: #747bff;
+}
