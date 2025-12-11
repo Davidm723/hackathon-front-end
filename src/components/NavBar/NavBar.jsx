@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <Link to="/">MyApp</Link>
+        <Link to="/">The hottest playlist app</Link>
       </div>
       <div className="nav-right">
         {user ? (
